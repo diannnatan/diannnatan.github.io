@@ -1,0 +1,33 @@
+# Site Settings
+title: "Diana's Portfolio"
+description: "Translational Research Scientist - Gene & Genetic Therapies"
+url: "https://diannnatan.github.io"
+baseurl: ""
+
+# Author Information
+author:
+  name: "Xiao (Diana) Tan"
+  email: "Diana.tan1@outlook.com"
+  bio: "Translational Research Scientist"
+  avatar: "/assets/images/profile.png"
+
+# Exclude files from processing (if using Jekyll)
+exclude:
+  - README.md
+  - node_modules
+  - vendor/
+
+# SEO Settings
+seo:
+  type: "Person"
+  name: "Diana T."
+  jobTitle: "Translational Research Scientist"
+  description: "Translational Research Scientist specializing in gene and genetic therapies"
+  url: "https://diannnatan.github.io"
+  image: "/assets/images/profile.png"
+  sameAs:
+    - "https://www.linkedin.com/in/diana-tanxiao"
+    - "https://github.com/diannnatan"
+
+# Google Analytics (uncomment and add your tracking ID)
+# google_analytics: "GA_TRACKING_ID"
