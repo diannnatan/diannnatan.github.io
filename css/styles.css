@@ -1952,7 +1952,7 @@ a:hover {
     bottom: 0;
     width: 3px;
     background: #0066cc;
-    z-index: 0;
+    z-index: 1;
 }
 
 .timeline-item {
