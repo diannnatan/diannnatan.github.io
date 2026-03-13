@@ -959,6 +959,30 @@ a:hover {
 }
 
 /* ========================================
+   Mobile layout tweaks to reduce wrapping
+   ======================================== */
+@media (max-width: 768px) {
+    /* Keep meta/status chips on a single row with horizontal scroll instead of wrapping */
+    .project-header-meta,
+    .project-meta,
+    .project-technologies,
+    .project-actions,
+    .presentation-links {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .project-header-meta > *,
+    .project-meta > *,
+    .project-technologies > *,
+    .project-actions > *,
+    .presentation-links > * {
+        white-space: nowrap;
+    }
+}
+
+/* ========================================
    Publications Page
    ======================================== */
 
