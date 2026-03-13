@@ -158,20 +158,29 @@ a:hover {
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
-        left: -100%;
         top: 70px;
+        right: 1rem;
+        left: auto;
         flex-direction: column;
         background-color: white;
-        width: 100%;
+        width: 80%;
+        max-width: 320px;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
+        transform-origin: top right;
+        transform: scale(0.9) translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.08);
         padding: 2rem 0;
         gap: 1rem;
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: scale(1) translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
 
     .nav-toggle {
