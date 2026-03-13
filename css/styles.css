@@ -1731,30 +1731,40 @@ a:hover {
    ======================================== */
 
 @media (max-width: 768px) {
+    /* Global mobile typography tweaks */
+    html {
+        font-size: 15px;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    h1 { font-size: 2.1rem; }
+    h2 { font-size: 1.8rem; }
+    h3 { font-size: 1.35rem; }
+    h4 { font-size: 1.15rem; }
+
     .hero {
         padding: 3rem 0;
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
         font-weight: 700;
     }
     
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.1rem;
         font-weight: 600;
     }
     
     .hero-description {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
     
     .hero-actions {
         justify-content: center;
-    }
-    
-    .section-title {
-        font-size: 2rem;
     }
     
     .about,
