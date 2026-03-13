@@ -1975,14 +1975,7 @@ a:hover {
 }
 
 .timeline::before {
-    content: '';
-    position: absolute;
-    left: 120px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #0066cc;
-    z-index: 0;
+    display: none;
 }
 
 .timeline-item {
