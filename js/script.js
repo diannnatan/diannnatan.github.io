@@ -102,33 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const publicationItems = document.querySelectorAll('.publication-item');
-    
-    if (filterButtons.length > 0 && publicationItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const filter = this.getAttribute('data-filter');
-                
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                
-                publicationItems.forEach(item => {
-                    if (filter === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        const publicationType = item.querySelector('.publication-type');
-                        if (publicationType && publicationType.classList.contains(filter)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-    }
-    
     const printButton = document.querySelector('button[onclick="window.print()"]');
     if (printButton) {
         printButton.addEventListener('click', function(e) {
