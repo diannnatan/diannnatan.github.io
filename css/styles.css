@@ -2130,6 +2130,41 @@ a:hover {
     margin-top: 1rem;
 }
 
+/* Mobile-specific header for timeline (dot + range on one line) */
+.timeline-header-mobile {
+    display: none;
+}
+
+.timeline-marker-mobile {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    box-shadow: 0 0 0 2px #0066cc;
+}
+
+.timeline-marker-mobile.internship {
+    background: #9b59b6;
+    box-shadow: 0 0 0 2px #9b59b6;
+}
+
+.timeline-marker-mobile.education {
+    background: #27ae60;
+    box-shadow: 0 0 0 2px #27ae60;
+}
+
+.timeline-marker-mobile.professional {
+    background: #0066cc;
+    box-shadow: 0 0 0 2px #0066cc;
+}
+
+.time-range-mobile {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0066cc;
+}
+
 /* Mobile layout for experience timeline */
 @media (max-width: 768px) {
     .timeline {
@@ -2146,20 +2181,9 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-    .timeline-time {
-        text-align: left;
-        padding-right: 0;
-        padding-top: 0;
-        margin-bottom: 0.5rem;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
+    .timeline-time,
     .timeline-marker {
-        position: static;
-        left: auto;
-        top: auto;
+        display: none;
     }
 
     .time-year {
@@ -2168,6 +2192,13 @@ a:hover {
 
     .timeline-content {
         padding: 1.25rem 1.5rem;
+    }
+
+    .timeline-header-mobile {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 }
 
