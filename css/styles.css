@@ -178,16 +178,20 @@ a:hover {
         display: flex;
     }
 
-    .nav-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .nav-toggle.active .bar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
+    /* When menu is open, show only the middle bar (no X icon) */
+    .nav-toggle.active .bar:nth-child(1),
     .nav-toggle.active .bar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
+        opacity: 0;
+        transform: none;
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 1;
+    }
+
+    /* Active link underline inside mobile menu: keep close to text */
+    .nav-link.active::after {
+        bottom: 0;
     }
 }
 
@@ -1766,6 +1770,12 @@ a:hover {
     .hero-actions {
         justify-content: center;
     }
+
+    /* Hide profile image on mobile hero */
+    .hero-image,
+    .profile-image {
+        display: none;
+    }
     
     .about,
     .quick-links,
@@ -1823,46 +1833,6 @@ a:hover {
     .social-links a::before {
         width: 18px;
         height: 18px;
-    }
-    
-    /* Experience timeline mobile */
-    .timeline {
-        padding-left: 0;
-    }
-    
-    .timeline::before {
-        left: 60px;
-    }
-    
-    .timeline-item {
-        grid-template-columns: 80px 1fr;
-        gap: 1rem;
-    }
-    
-    .timeline-marker {
-        left: 54px;
-        width: 12px;
-        height: 12px;
-    }
-    
-    .timeline-time {
-        padding-right: 1rem;
-    }
-    
-    .time-year {
-        font-size: 1rem;
-    }
-    
-    .time-start {
-        font-size: 0.75rem;
-    }
-    
-    .timeline-content {
-        padding: 1rem 1.5rem;
-    }
-    
-    .experience-role {
-        font-size: 1.25rem;
     }
     
     /* CV mobile */
@@ -1975,7 +1945,14 @@ a:hover {
 }
 
 .timeline::before {
-    display: none;
+    content: '';
+    position: absolute;
+    left: 120px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #0066cc;
+    z-index: 0;
 }
 
 .timeline-item {
