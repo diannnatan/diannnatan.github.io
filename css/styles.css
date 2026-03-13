@@ -2103,6 +2103,47 @@ a:hover {
     margin-top: 1rem;
 }
 
+/* Mobile layout for experience timeline */
+@media (max-width: 768px) {
+    .timeline {
+        margin-top: 1.5rem;
+        gap: 2rem;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-time {
+        text-align: left;
+        padding-right: 0;
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .timeline-marker {
+        position: static;
+        left: auto;
+        top: auto;
+    }
+
+    .time-year {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
 /* ========================================
    Updated CV Layout (Scannable)
    ======================================== */
