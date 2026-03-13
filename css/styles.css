@@ -151,7 +151,7 @@ a:hover {
     width: 25px;
     height: 3px;
     background: #333;
-    transition: 0.3s;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
 /* Mobile Navigation */
@@ -178,14 +178,19 @@ a:hover {
         display: flex;
     }
 
-    /* When menu is open, show only the middle bar (no X icon) */
-    .nav-toggle.active .bar:nth-child(1),
-    .nav-toggle.active .bar:nth-child(3) {
+    /* When menu is open, animate top/bottom bars into center then fade, keep only middle bar visible */
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: translateY(7px);
         opacity: 0;
-        transform: none;
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: translateY(-7px);
+        opacity: 0;
     }
 
     .nav-toggle.active .bar:nth-child(2) {
+        transform: scaleX(0.7);
         opacity: 1;
     }
 
