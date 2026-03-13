@@ -1843,6 +1843,18 @@ a:hover {
         width: 18px;
         height: 18px;
     }
+
+    /* CV: simplify inner blocks on mobile (remove light grey panel look only) */
+    .cv-item {
+        background: transparent;
+        box-shadow: none;
+        padding: 1.5rem 0;
+    }
+    
+    /* Experience: slightly tighter gap below blue header on mobile only */
+    .experience-timeline {
+        padding-top: 3rem;
+    }
     
     /* CV mobile */
     .cv-summary {
