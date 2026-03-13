@@ -159,26 +159,24 @@ a:hover {
     .nav-menu {
         position: fixed;
         top: 70px;
-        right: 1rem;
-        left: auto;
+        left: 0;
+        right: 0;
         flex-direction: column;
         background-color: white;
-        width: 80%;
-        max-width: 320px;
+        width: 100%;
         text-align: center;
-        border-radius: 8px;
-        transform-origin: top right;
-        transform: scale(0.9) translateY(-10px);
+        transform-origin: top center;
+        transform: translateY(-20px);
         opacity: 0;
         pointer-events: none;
         transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
         padding: 2rem 0;
         gap: 1rem;
     }
 
     .nav-menu.active {
-        transform: scale(1) translateY(0);
+        transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
     }
